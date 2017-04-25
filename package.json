@@ -1,0 +1,28 @@
+{
+  "name": "taskr",
+  "version": "1.0.0",
+  "description": "A cool to-do list app. Getter done with TaskR",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Limelight-Management-Group/taskr.git"
+  },
+  "keywords": [
+    "taskr",
+    "getter-done"
+  ],
+  "author": "Wayne & Ryan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Limelight-Management-Group/taskr/issues"
+  },
+  "homepage": "https://github.com/Limelight-Management-Group/taskr#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2"
+  }
+}
