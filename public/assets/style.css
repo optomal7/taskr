@@ -6,7 +6,7 @@ body{
 .welcome{
 	margin: auto;
 	font-family: sans-serif;
-
+	text-align: center;
 }
 .tstchk {
 	border-style: solid;
@@ -37,5 +37,5 @@ p {
 }
 
 .card-panel {
-	
+
 }
