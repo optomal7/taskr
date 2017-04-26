@@ -27,7 +27,7 @@
 		</form>
 		<ul>
 			<% for(var i = 0; i < todos.length; i++){ %>
-				<li><%= todos[i].item %></li>
+				<li><%= todos[i].task %></li>
 			<% }%>
 			</ul>
 	</div>
@@ -37,7 +37,7 @@
 	<h6>Kick up your feet, relax, and take a look at all the things you've finished.</h6>
 	<ul>
 		<% for(var i = 0; i < complete.length; i++){ %>
-			<li><%= complete[i].item %></li>
+			<li><%= complete[i].task %></li>
 		<% }%>
 	</ul>
 </div>
