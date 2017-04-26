@@ -8,19 +8,36 @@
   crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="/assets/style.css">
   <script type="text/javascript" src="assets/custom.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 </head>
 <body>
-<div id= "todo-table">
-	<form>
-		<input type="text" name="item" placeholder="Add a new task!" required>
-		<button type="submit"> Add Task</button>
-	</form>	
-	<ul>
-	<% for(var i = 0; i < todos.length; i++){ %>
-		<li><%= todos[i].item %></li>
-	<% }%>
-	</ul>
 
+<div class="card-panel teal lighten-2">
+	<div class="welcome">
+		<h1>Welcome to taskr!</h1>
+		<h3>The only todo app you'll ever need.</h3>
+		<p>(The one you may want is a different story)</p>
+	</div>
+	<div id= "todo-table">
+		<form>
+			<input type="text" name="item" placeholder="Add a new task!" required>
+			<button class="btn" type="submit"> Add Task</button>
+		</form>
+		<ul>
+			<% for(var i = 0; i < todos.length; i++){ %>
+				<li><%= todos[i].item %></li>
+			<% }%>
+			</ul>
+	</div>
 </div>
+<div class="card-panel teal lighten-4 center-align">
+	<h3>Go from to-do, to to-done!</h3>
+	<h6>Kick up your feet, relax, and take a look at all the things you've finished.</h6>
+	<ul>
+
+	</ul>
+</div>
+
 </body>
 </html>
