@@ -2,7 +2,7 @@
   "name": "taskr",
   "version": "1.0.0",
   "description": "A cool to-do list app. Getter done with TaskR",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
