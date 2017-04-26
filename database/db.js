@@ -1,31 +1,32 @@
-'use strict';
-var pgPromise = require('pg-promise')
-var pgp = pgPromise()
-var connectionString = 'postgres://localhost:5432/todos'
-var db = pgp('connectionString')
+const pgp = require('pg-promise')();
+const connectionString = 'postgres://localhost:5432/taskr';
+const db = pgp('connectionString');
 
-var Tasks = {
-  getAll: function getAll() {
-    return db.any('SELECT * FROM todos');
-  },
-  create: function create(task, descriptionItem) {
-    return db.any('INSERT INTO todos(task, description) VALUES ($1, $2)', [task, descriptionItem]);
-  },
-  delete: function _delete(id) {
-    return db.none('DELETE from todos WHERE id = $1', [id]);
-  },
-  completed: function completed(id) {
-    return db.any('UPDATE todos SET isCompleted=true WHERE id = $1', [id]);
-  },
-  setToIncomplete: function setToIncomplete(id) {
-    return db.any('UPDATE todos SET isCompleted=false WHERE id = $1', [id]);
-  },
-  edited: function edited(id, task, description) {
-    return db.any('UPDATE todos SET task=$1, description=$2 WHERE id = $3', [task, description, id]);
-  }
-};
+// const Tasks = {
+//   getAll: () => db.any('SELECT * FROM todos')
 
-module.exports = Tasks;
+//   // create: function create(task) {
+//   //   return db.any('INSERT INTO todos(task) VALUES ($1)', [task]);
+//   // },
+//   // delete: function _delete(id) {
+//   //   return db.none('DELETE from todos WHERE id = $1', [id]);
+//   // },
+//   // completed: function completed(id) {
+//   //   return db.any('UPDATE todos SET isCompleted=true WHERE id = $1', [id]);
+//   // },
+//   // setToIncomplete: function setToIncomplete(id) {
+//   //   return db.any('UPDATE todos SET isCompleted=false WHERE id = $1', [id]);
+//   // },
+//   // edited: function edited(id, task) {
+//   //   return db.any('UPDATE todos SET task=$1 WHERE id = $2', [task, id]);
+//   // }
+// };
+
+const getAll = () => db.any('SELECT * FROM todos')
+
+
+
+module.exports = {getAll:getAll}
 
 
 
