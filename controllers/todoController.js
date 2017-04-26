@@ -1,5 +1,6 @@
 var bodyParser = require('body-parser');
 var data = [{item: 'get milk'}, {item: 'get money'}, {item: 'build a kingdom'}];
+var complete = [{item: 'ate lunch'}]
 var urlencodedParser = bodyParser.urlencoded({ extended: false});
 var Tasks = require('../database/db.js')
 
@@ -7,8 +8,8 @@ var Tasks = require('../database/db.js')
 module.exports = function(app){
 	app.get('/todo', function(req, res){
 		Tasks()
-		.then(todos => {		
-			res.render('todo', {todos: data});
+		.then(todos => {
+			res.render('todo', {todos: data, complete});
 		})
 	});
 
