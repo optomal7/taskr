@@ -13,5 +13,5 @@ app.use(express.static('./public/'))
 todoController(app)
 
 //listen to port
-app.listen(3000);
-console.log('taskr is listening on port 3000!');
+app.listen(3001);
+console.log('taskr is listening on port 3001!');
