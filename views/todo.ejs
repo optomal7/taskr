@@ -44,6 +44,9 @@
 			<% if(todos[i].iscompleted) { %>
 				<li>
 					<%= todos[i].task %>
+					<form action="/delete/<%= todos[i].id %>" method="post">
+						<button type="submit">DELETE</button>
+					</form>
 				</li>
 				<% } %>
 		<% }%>
