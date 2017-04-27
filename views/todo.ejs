@@ -23,7 +23,15 @@
 		</form>
 		<ul>
 			<% for(var i = 0; i < todos.length; i++){ %>
-				<li><%= todos[i].task %></li>
+				<% if(!todos[i].iscompleted) { %>
+					<li>
+						<%= todos[i].task %>
+						<form action="/todo/<%= todos[i].id %>" method="post">
+							<button type="submit">Mark
+								complete</button>
+						</form>
+					</li>
+					<% } %>
 			<% }%>
 			</ul>
 	</div>
@@ -31,7 +39,15 @@
 <div class="card-panel teal lighten-4 center-align">
 	<h3>Go from to-do, to to-done!</h3>
 	<h6>Kick up your feet, relax, and take a look at all the things you've finished.</h6>
-	
+	<ul>
+		<% for(var i = 0; i < todos.length; i++){ %>
+			<% if(todos[i].iscompleted) { %>
+				<li>
+					<%= todos[i].task %>
+				</li>
+				<% } %>
+		<% }%>
+	</ul>
 </div>
 
 </body>
