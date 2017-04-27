@@ -23,6 +23,11 @@ var Tasks = {
   }
 };
 
+// console.log('about to run Tasks.completed(2)')
+// Tasks.completed(34)
+// console.log('Tasks.completed(2) was just run')
+
+
 module.exports = Tasks;
 
 

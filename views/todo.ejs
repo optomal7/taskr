@@ -23,7 +23,9 @@
 		</form>
 		<ul>
 			<% for(var i = 0; i < todos.length; i++){ %>
-				<li><%= todos[i].task %></li>
+				<form method="post" action="/complete/<%- todos[i].id %>">
+				<li><button class="btn" type="submit"><%= todos[i].task %></button></li>
+				</form>
 			<% }%>
 			</ul>
 	</div>

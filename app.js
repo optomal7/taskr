@@ -16,14 +16,12 @@ app.use(bodyParser.urlencoded({extended: false }))
 app.get('/', (request, response) => {
 	db.getAll()
 	.then(todos => {
-		console.log(todos)
 		response.render('todo', {todos: todos})
 	})
 })
 
 app.post('/todo', (request, response) => {
 	var task = request.body.item
-	console.log(task)
 
 	db.create(task)
 	.then(todos => {
@@ -33,14 +31,25 @@ app.post('/todo', (request, response) => {
 
 app.delete('/todo/:id', (request, response) => {
 	var id = request.params
-	db.delete()
+	db.delete(id)
+
 	.then(todos => {
 		console.log(todos)
-		response.response.send('Task Completed!')
+		response.send('Task deleted!')
+	})
+})
+app.post('/complete/:id', (request, response) => {
+	var id = request.params.id
+	console.log('this is the put', id)
+
+	db.completed(id)
+	.then(todos => {
+		response.redirect('/')
 	})
 })
 //static files using express static
 app.use(express.static(path.join(__dirname, './public/')))
+
 
 //fire controllers
 // todoController(app)
