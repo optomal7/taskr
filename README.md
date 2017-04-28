@@ -12,9 +12,11 @@
 
 ***
 # *Technology Used
-# * Built with.
-###  + Node.
-
+#  Built with:
+ + NodeJS
+ + ExpressJS
+ + PostgreSQL 
+ + Materialize
 
 
 
