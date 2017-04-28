@@ -47,11 +47,11 @@
 ***
 ## The specifications for this sprint were:
 
- [x] Users can create to do list items.
+ - [x] Users can create to do list items.
  
- [x] Users can delete unwanted to do list items.
+ - [x] Users can delete unwanted to do list items.
  
- [x] Users can check items off as completed.
+ - [x] Users can check items off as completed.
  
  [x] Users can edit the text on existing to do list items.
  
