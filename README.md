@@ -45,7 +45,7 @@
 ### Navigate to localhost:3001 and go from to-do to to-done with taskr...
     http://localhost:3001/
 ***
-## The specifications for this sprint are:
+## The specifications for this sprint were:
 
  [] Users can create to do list items.
  
