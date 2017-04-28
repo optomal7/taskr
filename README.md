@@ -53,25 +53,25 @@
  
  - [x] Users can check items off as completed.
  
- [x] Users can edit the text on existing to do list items.
+ - [x] Users can edit the text on existing to do list items.
  
- [x] UI renders to do items differently when they are completed (using a checkbox or some other indicator).
+ - [x] UI renders to do items differently when they are completed (using a checkbox or some other indicator).
  
- [x] When an error occurs, the user is notified with modal message.*
+ - [x] When an error occurs, the user is notified with modal message.*
  
- [x] Backend uses Node.js and Express.
+ - [x] Backend uses Node.js and Express.
  
- [x] App persists to do list items in a database.
+ - [x] App persists to do list items in a database.
  
- [x] Code uses a linter and there are no linting errors.
+ - [x] Code uses a linter and there are no linting errors.
  
- [x] There are thorough tests for all functionality involved in interacting with the database.
+ - [x] There are thorough tests for all functionality involved in interacting with the database.
  
- [x] There are tests for creating to do list items.
+ - [x] There are tests for creating to do list items.
  
- [x] There are tests for deleting to do list items.
+ - [x] There are tests for deleting to do list items.
  
- [x] There are tests for completing to do list items.
+ - [x] There are tests for completing to do list items.
  
  [x] There are tests for editing to do list items.
  
