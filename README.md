@@ -12,8 +12,8 @@
 
 ***
 # Technology Used
-## +Built with
-###  + Node
+## +Built with.
+###  + Node.
 
 
 
