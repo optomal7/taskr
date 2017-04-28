@@ -11,12 +11,15 @@
 ## Get Taskr and getr done.
 
 ***
-# *Technology Used
-#  Built with:
+# Technology Used
+##  Built with:
  + NodeJS
  + ExpressJS
  + PostgreSQL 
  + Materialize
+ 
+ ***
+# Installation Instructions
 
 
 
