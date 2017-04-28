@@ -11,8 +11,9 @@
 ## Get Taskr and getr done.
 
 ***
-` kmk
-' kk
+# Technology Used
+## +Built with
+###  + Node
 
 
 
