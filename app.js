@@ -13,7 +13,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // static files using express static
 app.use(express.static(path.join(__dirname, './public/')));
 
-// listen to port
-app.listen(3001);
+var port = process.env.PORT || 3001
 
-console.log('taskr is listening on port 3001!');
+
+// listen to port
+app.listen(port, function() {
+console.log('taskr is listening on port: ' + port);
+});
