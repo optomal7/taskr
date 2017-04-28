@@ -37,6 +37,22 @@ module.exports = function(app){
 		res.redirect('/todo');
 	});
 
+	app.get('/bob/:item', function(req, res){
+		Tasks.getOne(req.params.item)	
+		.then(todos => {
+
+			res.render('edit', {todos: todos});				
+			})
+	});
+
+	app.post('/edit/:item',urlencodedParser, function(req, res){
+		let task = (req.body.item)
+		let id = (req.params.item)
+
+		Tasks.edited(id, task);
+		res.redirect('/todo');
+	});
+
 	// app.delete('/todo/:item', function(req, res){
 	// 	console.log('an http delete request was recieved at the endpoint/route "/todo:item"')
 	// 	data = data.filter(function(todo){
