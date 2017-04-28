@@ -1,29 +1,30 @@
-var pgp = require('pg-promise')()
-var connectionString = 'postgres://localhost:5432/taskr'
-var db = pgp(connectionString)
+const pgp = require('pg-promise')();
 
-var Tasks = {
-  getAll: function() {
+const connectionString = 'postgres://localhost:5432/taskr';
+const db = pgp(connectionString);
+
+const Tasks = {
+  getAll() {
     return db.any('SELECT * FROM todos');
   },
-  create: function (task) {
+  create(task) {
     return db.any('INSERT INTO todos (task) VALUES ($1)', [task]);
   },
-  delete: function (id) {
+  delete(id) {
     return db.none('DELETE from todos WHERE id = $1', [id]);
   },
-  completed: function (id) {
+  completed(id) {
     return db.any('UPDATE todos SET isCompleted=true WHERE id = $1', [id]);
   },
-  setToIncomplete: function (id) {
+  setToIncomplete(id) {
     return db.any('UPDATE todos SET isCompleted=false WHERE id = $1', [id]);
   },
-  edited: function (id, task) {
-    return db.any('UPDATE todos SET task=$1 WHERE id = $2', [task, id]);
+  edited(id, task) {
+    return db.any('UPDATE todos SET task=$1 WHERE id = $2 RETURNING task', [task, id]);
   },
-  getOne: function(id){
+  getOne(id) {
     return db.one('SELECT * FROM todos WHERE id = $1', [id]);
-  }
+  },
 };
 
 module.exports = Tasks;
