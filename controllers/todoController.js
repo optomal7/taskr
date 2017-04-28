@@ -28,4 +28,20 @@ module.exports = function(app){
 		Tasks.delete(req.params.item);
 		res.redirect('/todo');
 	});
+
+	app.get('/bob/:item', function(req, res){
+		Tasks.getOne(req.params.item)	
+		.then(todos => {
+
+			res.render('edit', {todos: todos});				
+			})
+	});
+
+	app.post('/edit/:item',urlencodedParser, function(req, res){
+		let task = (req.body.item)
+		let id = (req.params.item)
+
+		Tasks.edited(id, task);
+		res.redirect('/todo');
+	});
 };

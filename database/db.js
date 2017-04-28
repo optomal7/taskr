@@ -20,6 +20,9 @@ var Tasks = {
   },
   edited: function (id, task) {
     return db.any('UPDATE todos SET task=$1 WHERE id = $2', [task, id]);
+  },
+  getOne: function(id){
+    return db.one('SELECT * FROM todos WHERE id = $1', [id]);
   }
 };
 
