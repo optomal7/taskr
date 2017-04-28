@@ -1,25 +1,21 @@
-var express = require('express');
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
 
-var app = express();
-const path = require('path')
-const db = require('./database/db')
-const bodyParser = require('body-parser')
-var data = [{item: 'get milk'}, {item: 'get money'}, {item: 'build a kingdom'}];
 
+const app = express();
 require('./controllers/todoController')(app);
 
-//set up template
+// set up template
 app.set('view engine', 'ejs');
 
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extended: false }))
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
-//static files using express static
-app.use(express.static(path.join(__dirname, './public/')))
+// static files using express static
+app.use(express.static(path.join(__dirname, './public/')));
 
-//fire controllers
-// todoController(app)
-
-//listen to port
+// listen to port
 app.listen(3001);
+
 console.log('taskr is listening on port 3001!');

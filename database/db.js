@@ -1,9 +1,10 @@
-var pgp = require('pg-promise')()
-var connectionString = 'postgres://localhost:5432/taskr'
-var db = pgp(connectionString)
+const pgp = require('pg-promise')();
 
-var Tasks = {
-  getAll: function() {
+const connectionString = 'postgres://localhost:5432/taskr';
+const db = pgp(connectionString);
+
+const Tasks = {
+  getAll: function () {
     return db.any('SELECT * FROM todos');
   },
   create: function (task) {
@@ -21,9 +22,9 @@ var Tasks = {
   edited: function (id, task) {
     return db.any('UPDATE todos SET task=$1 WHERE id = $2', [task, id]);
   },
-  getOne: function(id){
+  getOne: function (id) {
     return db.one('SELECT * FROM todos WHERE id = $1', [id]);
-  }
+  },
 };
 
 module.exports = Tasks;
