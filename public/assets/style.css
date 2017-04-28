@@ -8,12 +8,6 @@ body{
 	font-family: sans-serif;
 	text-align: center;
 }
-.tstchk {
-	border-style: solid;
-	border-color: black;
-	border-width: 1px;
-
-}
 
 h1 {
 	text-align: center;
@@ -34,8 +28,4 @@ p {
 	width: 50%;
 	margin: 0 auto;
 	vertical-align: center;
-}
-
-.card-panel {
-
 }
