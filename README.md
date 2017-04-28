@@ -73,19 +73,19 @@
  
  - [x] There are tests for completing to do list items.
  
- [x] There are tests for editing to do list items.
+ - [x] There are tests for editing to do list items.
  
- [x] All tests are passing.
+ - [x] All tests are passing.
  
- [x] Repository includes a README file with basic installation and setup.
+ - [x] Repository includes a README file with basic installation and setup.
  
- [x] All dependencies are properly declared in package.json.
+ - [x] All dependencies are properly declared in package.json.
  
- [x] All major features are added via pull requests with a clear description and concise commit messages.
+ - [x] All major features are added via pull requests with a clear description and concise commit messages.
  
- [x] Every pull request has been reviewed by at least one other person.
+ - [x] Every pull request has been reviewed by at least one other person.
  
- [x] The artifact produced is properly licensed, preferably with the MIT license.
+ - [x] The artifact produced is properly licensed, preferably with the MIT license.
 
 
 
