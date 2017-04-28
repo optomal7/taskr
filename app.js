@@ -15,4 +15,5 @@ app.use(express.static(path.join(__dirname, './public/')));
 
 // listen to port
 app.listen(3001);
+
 console.log('taskr is listening on port 3001!');
