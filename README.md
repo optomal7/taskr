@@ -47,45 +47,45 @@
 ***
 ## The specifications for this sprint were:
 
- [] Users can create to do list items.
+ [x] Users can create to do list items.
  
- [] Users can delete unwanted to do list items.
+ [x] Users can delete unwanted to do list items.
  
- [] Users can check items off as completed.
+ [x] Users can check items off as completed.
  
- [] Users can edit the text on existing to do list items.
+ [x] Users can edit the text on existing to do list items.
  
- [] UI renders to do items differently when they are completed (using a checkbox or some other indicator).
+ [x] UI renders to do items differently when they are completed (using a checkbox or some other indicator).
  
- [] When an error occurs, the user is notified with modal message.*
+ [x] When an error occurs, the user is notified with modal message.*
  
- [] Backend uses Node.js and Express.
+ [x] Backend uses Node.js and Express.
  
- [] App persists to do list items in a database.
+ [x] App persists to do list items in a database.
  
- [] Code uses a linter and there are no linting errors.
+ [x] Code uses a linter and there are no linting errors.
  
- [] There are thorough tests for all functionality involved in interacting with the database.
+ [x] There are thorough tests for all functionality involved in interacting with the database.
  
- [] There are tests for creating to do list items.
+ [x] There are tests for creating to do list items.
  
- [] There are tests for deleting to do list items.
+ [x] There are tests for deleting to do list items.
  
- [] There are tests for completing to do list items.
+ [x] There are tests for completing to do list items.
  
- [] There are tests for editing to do list items.
+ [x] There are tests for editing to do list items.
  
- [] All tests are passing.
+ [x] All tests are passing.
  
- [] Repository includes a README file with basic installation and setup.
+ [x] Repository includes a README file with basic installation and setup.
  
- [] All dependencies are properly declared in package.json.
+ [x] All dependencies are properly declared in package.json.
  
- [] All major features are added via pull requests with a clear description and concise commit messages.
+ [x] All major features are added via pull requests with a clear description and concise commit messages.
  
- [] Every pull request has been reviewed by at least one other person.
+ [x] Every pull request has been reviewed by at least one other person.
  
- [] The artifact produced is properly licensed, preferably with the MIT license.
+ [x] The artifact produced is properly licensed, preferably with the MIT license.
 
 
 
