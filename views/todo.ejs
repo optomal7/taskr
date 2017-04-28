@@ -27,7 +27,7 @@
 					<li>
 						<%= todos[i].task %>
 						<form action="/todo/<%= todos[i].id %>" method="post">
-							<button type="submit">Mark
+							<button class="btn" type="submit">Mark
 								complete</button>
 						</form>
 					</li>
@@ -45,7 +45,7 @@
 				<li>
 					<%= todos[i].task %>
 					<form action="/delete/<%= todos[i].id %>" method="post">
-						<button type="submit">DELETE</button>
+						<button class="btn" type="submit">DELETE</button>
 					</form>
 				</li>
 				<% } %>

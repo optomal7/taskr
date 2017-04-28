@@ -1,6 +1,4 @@
 var bodyParser = require('body-parser');
-var data = [{item: 'get milk'}, {item: 'get money'}, {item: 'build a kingdom'}];
-var complete = [{item: 'ate lunch'}]
 var urlencodedParser = bodyParser.urlencoded({ extended: false});
 var Tasks = require('../database/db.js')
 
@@ -20,11 +18,6 @@ module.exports = function(app){
 		.then(todos => {
 			res.redirect('/todo');
 		})
-		// console.log(req.body)
-		// data.push(req.body)
-		// res.json(data)
-
-
 	});
 
 	app.post('/todo/:item', function(req, res){
@@ -36,13 +29,4 @@ module.exports = function(app){
 		Tasks.delete(req.params.item);
 		res.redirect('/todo');
 	});
-
-	// app.delete('/todo/:item', function(req, res){
-	// 	console.log('an http delete request was recieved at the endpoint/route "/todo:item"')
-	// 	data = data.filter(function(todo){
-	// 		return todo.item.replace(/ /g, '-') !== req.params.item;
-	// 	});
-	// 	res.redirect('/todo');
-	// });
-
 };
