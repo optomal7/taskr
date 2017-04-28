@@ -21,7 +21,9 @@
  ***
 # Installation Instructions
 ### To run this app successfully, you must have PostgreSQL installed. You can run the brew installation command:
-    ##### $ brew install postgresql
+    $ brew install postgresql
+### If this is your first time installing Postgres with Homebrew, you'll need to create a database with:
+    
 
 
 
