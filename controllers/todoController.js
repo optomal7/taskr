@@ -4,7 +4,7 @@ var Tasks = require('../database/db.js')
 
 
 module.exports = function(app){
-	app.get('/', function(req, res){
+	app.get('/todo', function(req, res){
 		Tasks.getAll()
 		.then(todos => {
 			res.render('todo', {todos: todos});
