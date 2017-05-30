@@ -1,7 +1,5 @@
 const pgp = require('pg-promise')();
 
-const pgp = require('pg-promise')();
-
 if(process.env.NODE_ENV === 'production'){
   pgp.pg.defaults.ssl = true;
 };
