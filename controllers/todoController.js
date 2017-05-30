@@ -10,6 +10,19 @@ module.exports = function(app){
 			res.render('todo', {todos: todos});
 		})
 	});
+	app.get('/', function(req, res){
+		Tasks.getAll()
+		.then(todos => {
+			res.render('todo', {todos: todos});
+		})
+	});
+	app.get('/test', function(req, res){
+		Tasks.getAll()
+		console.log(res.body)
+		.then(todos => {
+			res.render('test', {todos: todos});
+		})
+	})
 
 	app.post('/todo', urlencodedParser, function(req, res){
 
@@ -29,7 +42,7 @@ module.exports = function(app){
 		res.redirect('/todo');
 	});
 
-	app.get('/bob/:item', function(req, res){
+	app.get('/edit/:item', function(req, res){
 		Tasks.getOne(req.params.item)	
 		.then(todos => {
 
