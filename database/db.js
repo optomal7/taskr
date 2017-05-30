@@ -1,9 +1,10 @@
 const pgp = require('pg-promise')();
 
-var pg = require('pg').native
-pg.connect(process.env.DATABASE_URL, function (err, conn, done) {
-    
-});
+const pgp = require('pg-promise')();
+
+if(process.env.NODE_ENV === 'production'){
+  pgp.pg.defaults.ssl = true;
+};
 
 const connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/taskr';
 const db = pgp(connectionString);
