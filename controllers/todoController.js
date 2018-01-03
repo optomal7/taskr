@@ -1,6 +1,7 @@
-var bodyParser = require('body-parser');
-var urlencodedParser = bodyParser.urlencoded({ extended: false});
-var Tasks = require('../database/db.js')
+const Tasks = require('../database/db.js');
+const bodyParser = require('body-parser');
+
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 
 module.exports = function(app){
@@ -44,9 +45,10 @@ module.exports = function(app){
 
 	app.get('/edit/:item', function(req, res){
 		Tasks.getOne(req.params.item)	
+
 		.then(todos => {
 
-			res.render('edit', {todos: todos});				
+			res.render('edit', {todos: todos});
 			})
 	});
 

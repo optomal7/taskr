@@ -4,6 +4,7 @@
   "description": "A cool to-do list app. Getter done with TaskR",
   "main": "app.js",
   "scripts": {
+		"start": "node app.js",
     "test": "mocha",
     "lint": "eslint .",
     "start": "node app.js",
