@@ -1,28 +1,32 @@
 const pgp = require('pg-promise')();
 
+if(process.env.NODE_ENV === 'production'){
+  pgp.pg.defaults.ssl = true;
+};
+
 const connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/taskr';
 const db = pgp(connectionString);
 
 const Tasks = {
-  getAll: function () {
+  getAll() {
     return db.any('SELECT * FROM todos');
   },
-  create: function (task) {
+  create(task) {
     return db.any('INSERT INTO todos (task) VALUES ($1)', [task]);
   },
-  delete: function (id) {
+  delete(id) {
     return db.none('DELETE from todos WHERE id = $1', [id]);
   },
-  completed: function (id) {
+  completed(id) {
     return db.any('UPDATE todos SET isCompleted=true WHERE id = $1', [id]);
   },
-  setToIncomplete: function (id) {
+  setToIncomplete(id) {
     return db.any('UPDATE todos SET isCompleted=false WHERE id = $1', [id]);
   },
-  edited: function (id, task) {
-    return db.any('UPDATE todos SET task=$1 WHERE id = $2', [task, id]);
+  edited(id, task) {
+    return db.any('UPDATE todos SET task=$1 WHERE id = $2 RETURNING task', [task, id]);
   },
-  getOne: function (id) {
+  getOne(id) {
     return db.one('SELECT * FROM todos WHERE id = $1', [id]);
   },
 };

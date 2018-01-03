@@ -11,14 +11,13 @@
 
 <div class="card-panel teal lighten-2">
 	<div class="welcome">
-		<h1>Welcome to taskr!</h1>
-		<h3>The only todo app you'll ever need.</h3>
-		<p>(The one you may want is a different story)</p>
-		<h5>Enter the things you plan to do in the field provided, and simply click them when you're done.</h5>
+		<h1>taskr edit screen</h1>
+		<h5>It looks like you wanna edit your todo, it's fine with us. We won't tell anyone you moved the goalpost.</h5>
+		<p>Just put the new thing you wanted to say in the field below.</p>
 	</div>
 		<form method="post" action="/edit/<%= todos.id %>">
 			<input type="text" name="item" placeholder="<%= todos.task %>" required>
-			<button class="btn" type="submit"> Edit Task</button>
+			<button class="btn" type="submit">Edit Task</button>
 		</form>
 	</div>
 </body>

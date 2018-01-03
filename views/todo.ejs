@@ -46,8 +46,8 @@
 					<form action="/delete/<%= todos[i].id %>" method="post">
 						<button class="btn" type="submit">DELETE</button>
 					</form>
-					<form action="/bob/<%= todos[i].id %>" method="get">
-						<button class= "btn" type="submit">Edit</button>
+					<form action="/edit/<%= todos[i].id %>" method="get">
+						<button class="btn" type="submit">Edit</button>
 					</form>
 				</li>
 				<% } %>
