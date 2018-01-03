@@ -16,6 +16,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, './public/')));
 
 // listen to port
-app.listen(3001);
+app.listen(process.env.PORT || 3001);
 
 console.log('taskr is listening on port 3001!');

@@ -1,6 +1,6 @@
 const pgp = require('pg-promise')();
 
-const connectionString = 'postgres://localhost:5432/taskr';
+const connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/taskr';
 const db = pgp(connectionString);
 
 const Tasks = {
